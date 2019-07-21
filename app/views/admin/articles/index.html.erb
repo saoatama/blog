@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<main>
+<h1>Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Status</th>
+      <th>Slung</th>
+      <th>Picture</th>
+      <th>外部キー</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.id %></td>
+        <td><%= article.title %></td>
+        <td class="text"><%= article.text %></td>
+        <td><%= article.status %></td>
+        <td><%= article.slung %></td>
+        <td><%= article.picture %></td>
+        <td><%= article.archive_id %></td>
+        <td><%= link_to 'Show', [:admin, article] %></td>
+        <td><%= link_to 'Edit', edit_admin_article_path(article) %></td>
+        <td><%= link_to 'Destroy', [:admin, article], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_admin_article_path %>
+</main>
+<%= render '/admin/side' %>

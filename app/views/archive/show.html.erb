@@ -1,0 +1,17 @@
+<%= render 'share/header' %>
+
+<main>
+  <% @archive.articles.each do |article| %>
+  <section>
+    <p class="time"><%= article.created_at %></p>
+    <article>
+      <%= image_tag article.picture, class: "thumbnail" %>
+      <p class="title"><%= article.title %></p>
+      <p class="text"><%= article.text %></p>
+      <%= link_to "readmore", "/entry/#{article.slung}", :target=>"_blank", class: "readmore" %>
+    </article>
+    </section>
+  <% end %>
+</main>
+<%= render 'share/side' %>
+<div class="back"><%= link_to "記事一覧", '/' %></div>

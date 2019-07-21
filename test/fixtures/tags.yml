@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: 飯
+
+two:
+  id: 2
+  name: フレンチ
+
+two:
+  id: 3
+  name: 中華

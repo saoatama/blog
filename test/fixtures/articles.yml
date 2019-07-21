@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  title: 今日のご飯
+  text: 隴西ろうさいの李徴りちょうは博学才穎さいえい、天宝の末年、若くして名を虎榜こぼうに連ね、ついで江南尉こうなんいに補せられたが、性、狷
+  status: false
+  slung: today_gohan
+  picture: 2015110500.png
+
+two:
+  id: 2
+  title: MyString
+  text: MyText
+  status: false
+  slung: MyString
+  picture: 2015110500.png

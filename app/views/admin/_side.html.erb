@@ -1,0 +1,12 @@
+<nav>
+  <div class="logOut">
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+</div>
+  <ul>
+    <li><%= link_to "記事の追加", admin_articles_path %></li>
+    <li><%= link_to "タグの追加", admin_tags_path %></li>
+    <li><%=link_to "記事とタグの関連付け", admin_articles_tags_path %></li>
+    <li><%= link_to "月刊まとめ", admin_archives_path %></li>
+    <li><%= link_to "ホーム画面へ", '/' %></li>
+  </ul>
+</nav>

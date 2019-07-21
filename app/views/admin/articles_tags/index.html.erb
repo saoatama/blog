@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<main>
+<h1>Articles Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>article_id</th>
+      <th>tag_id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles_tags.each do |articles_tag| %>
+      <tr>
+        <td><%= articles_tag.article_id %></td>
+        <td><%= articles_tag.tag_id %></td>
+        <td><%= link_to 'Show', [:admin, articles_tag] %></td>
+        <td><%= link_to 'Edit', edit_admin_articles_tag_path(articles_tag) %></td>
+        <td><%= link_to 'Destroy', [:admin, articles_tag], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Articles Tag', new_admin_articles_tag_path %>
+</main>
+<%= render '/admin/side' %>

@@ -1,0 +1,102 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com
+
+body{
+	font-family: "メイリオ", "Meiryo","游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+	overflow-x: hidden;
+	background-color: #d6d6d6;
+}
+
+.header{
+  width: 1200px;
+  height: 200px;
+}
+
+main{
+  background-color: #00ff00;
+  width: 720px;
+  float:left;
+	position: relative;
+}
+
+article{
+  width: 500px;
+  height: 180px;
+	margin-left: 50px;
+	margin-bottom: 50px;
+  background-color: #f0f8ff;
+}
+
+img.thumbnail{
+  padding: 0px;
+  margin: 20px;
+	margin-top: 30px;
+  width: 120px;
+	height: 120px;
+	float: left;
+}
+
+.title{
+  font-size: 20px;
+	margin: 0px 0px 10px 0px;
+}
+
+.time{
+  padding-top: 10px;
+  color: #808080;
+  margin-left: 100px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.text{
+  padding: 0px;
+	margin: 0px 20px 0px 0px;
+  width: 300px;
+  height: 100px;
+  background-color: #ffffff;
+	word-wrap: break-word;
+	overflow: hidden;
+  text-overflow: ellipsis;
+	float: right;
+}
+
+.readmore{
+	font-size: 16px;
+	margin-right: 20px;
+	float: right;
+}
+
+.full_text{
+	background-color: #ffffff;
+	margin-right: 50px;
+	word-wrap: break-word;
+}
+
+.content{
+	margin-left: 50px;
+	text-align: center;
+}
+
+.tag{
+	display: inline-block;
+	padding: 4px;
+	margin: 4px 4px 4px 0px;
+	background-color: #fff8dc;
+}
+
+.back{
+	clear: both;
+	text-align: center;
+}
+
+nav{
+  width: 200px;
+  background-color: #f0f8ff;
+  margin-right: 50px;
+  float:right;
+}
+nav ul{
+	padding-left: 0px;
+}

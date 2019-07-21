@@ -1,0 +1,19 @@
+<%= render 'share/header' %>
+
+<main>
+  <% @articles.each do |article| %>
+  <section>
+    <p class="time"><%= article.created_at %></p>
+    <% article.tags.each do |tag| %>
+        <p class="tag"><%= tag.name %></p>
+    <% end %>
+    <div class="content">
+      <p class="title"><%= article.title %></p>
+      <%= image_tag article.picture, class: "article_thumbnail" %>
+      <p class="full_text"><%= article.text %></p>
+    </div>
+    </section>
+  <% end %>
+</main>
+<%= render 'share/side' %>
+<div class="back"><%= link_to "記事一覧", '/' %></div>

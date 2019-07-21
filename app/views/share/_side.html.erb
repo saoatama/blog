@@ -1,0 +1,10 @@
+<nav>
+  <p>  私 </p>
+  <p> 私は文系大学生で約１０ヶ月ほどruby on rails で開発に携わっています。<br />未経験からwebサイトを作れるようになりました。内定先はSEですが、web制作は成果が目に見えるのでやりがいを感じています。</p>
+  <hr>
+  <% @archives.all.each do |list| %>
+    <ul>
+      <%=link_to "#{list.month}月の記事一覧", "/archive/#{list.id}" %>
+      </ul>
+  <% end %>
+</nav>

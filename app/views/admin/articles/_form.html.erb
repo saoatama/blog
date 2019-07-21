@@ -1,0 +1,59 @@
+<%= form_for [:admin, @article] do |form| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :id %>
+    <% if @article.id.nil? %>
+      <%= form.text_field :id, value: "#{Article.last.id +=1}" %>
+    <% else %>
+      <%= form.text_field :id %>
+      <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slung %>
+    <%= form.text_field :slung %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :archive_id %>
+    <% if @article.archive_id.nil? %>
+      <%= form.text_field :archive_id, value: "#{Time.month}" %>
+    <% else %>
+      <%= form.text_field :archive_id %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

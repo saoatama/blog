@@ -1,0 +1,31 @@
+<%= form_for [:admin, @articles_tag] do |form| %>
+  <% if articles_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(articles_tag.errors.count, "error") %> prohibited this articles_tag from being saved:</h2>
+
+      <ul>
+      <% articles_tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :article_id %>
+    <% if @articles_tag.id.nil? %>
+      <%= form.text_field :article_id, value: "#{@articles_tag.last.id +=1}" %>
+    <% else %>
+      <%= form.text_field :article_id %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag_id %>
+    <%= form.text_field :tag_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
