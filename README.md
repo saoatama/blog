@@ -1,24 +1,9 @@
-# README
+# 簡易的なブログ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 作成意図
+- Railsの練習
+- よくチュートリアルとかでありそうな簡易的なブログを作ってみた。
+のだと思う。いつ作ったのかももはや正直覚えていない。
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
